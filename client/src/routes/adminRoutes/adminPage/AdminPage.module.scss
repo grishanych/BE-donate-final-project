@@ -1,0 +1,99 @@
+@use "../../../styles/variables";
+@use "../../../styles/mixins";
+@import "../../../styles/mediaqueries";
+
+.sectionWrapper {
+    padding: 50px 15px 100px;
+  }
+
+.mainSection {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.adminSectionHeadline {
+    margin-bottom: 20px;
+    color: variables.$fc-main;
+    font-weight: 700;
+    font-size: variables.$fs-xxl;
+    text-transform: uppercase;
+
+    @include devices(mobile) {
+        font-size: variables.$fs-l;
+    }
+}
+
+.section-container {
+    max-width: 25%;
+    margin-bottom: 20px;
+    box-shadow: 9px 9px 5px -4px rgba(124, 141, 102, 1);
+    transition: max-height .3s ease;
+
+    @include devices(mobile) {
+        max-width: 300px;
+    }
+
+    &.collapsed {
+        max-height: 0;
+        overflow: hidden;
+    }
+}
+
+.section-container__title {
+    margin-top: 20px;
+    margin-bottom: 5px;
+    color: variables.$fc-main;
+    font-weight: 700;
+    border-bottom: .3px solid variables.$fc-main;
+    cursor: pointer;
+}
+
+.blockShowHide {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    box-shadow: 7px 7px 5px -4px variables.$fc-main;
+}
+.buttonShowHide {
+    margin-bottom: 5px;
+    padding: 2px 10px;
+    color: #fff;
+    background-color: variables.$fc-main;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.showRow {
+    display: flex;
+    gap: 5px;
+    transition: 2s;
+}
+
+.showRowSort {
+    display: flex;
+    gap: 5px;
+    margin-left: 50px;
+}
+
+.titleContainer {
+    padding-top: 5px;
+    color: variables.$fc-text;
+}
+
+.showList {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-height: 500px;
+    margin: 20px 0 10px 0;
+    overflow-y: auto;
+}
+
+.emailQuantity {
+    width: 50%;
+    margin-top: 10px;
+}

@@ -1,0 +1,21 @@
+.listNumber{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.iteamNumber{
+    width: 30px;
+    margin: 3px;
+    padding: 3px 5px;
+    font-size: 18px;
+    text-align: center;
+    border: 2px solid #7c8d66;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.iteamNumber:hover{
+    color: #ffff;
+    background-color: #7c8d66;
+}

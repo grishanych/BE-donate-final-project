@@ -1,0 +1,18 @@
+@import "../../styles/mediaqueries";
+
+.sortOptions {
+ position: absolute;
+ top: -20px;
+ right: 0;
+ width: 200px;
+
+  @include devices(mobile) {
+    position: static;
+    width: 200px;
+  }
+}
+
+.sortOptions select {
+  width: 100%;
+  padding: 5px 25px;
+}

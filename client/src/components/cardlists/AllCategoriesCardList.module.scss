@@ -1,0 +1,175 @@
+@use "../../styles/variables";
+@import "../../styles/mediaqueries";
+
+.subCategoryOptions{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  width: 350px;
+
+  @include devices(mobile) {
+    width: 300px;
+  }
+}
+
+.categoryOptionWrapper {
+  @include devices(mobile) {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    & h3 {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
+.categoryOption {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.categorySelect {
+  position: absolute;
+  top: -20px;
+  left: 0;
+
+  @include devices(mobile) {
+    position: static;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+.buttonLinksWrapper {
+  margin: 0 10px;
+}
+
+.filtrationWrapper {
+  position: relative;
+  display: flex;
+  width: 100%;
+  padding: 30px 0px 20px;
+
+  @include devices(mobile) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0px;
+  }
+
+  & p {
+    padding-bottom: 15px;
+    color: variables.$fc-text;
+
+    @include devices(mobile) {
+      padding-bottom: 20px;
+    }
+  }
+}
+
+.filtrationSelectWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  
+
+  @include devices(mobile) {
+    align-items: center;
+    width: 280px;
+    padding-bottom: 25px;
+  }
+}
+
+
+
+.filtration {
+  display: flex;
+  flex-direction: column;
+  width: 220px;
+
+  @include devices(tablet) {
+    width: 200px;
+    padding-right: 0px;
+  }
+
+  @include devices(mobile) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding-right: 0px;
+  }
+}
+
+
+.customCheckbox {
+  position: relative;
+  width: 1rem;
+  height: 1rem;
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  appearance: none;
+}
+.customCheckbox:checked:before {
+  background: #c6d9d9;
+}
+.customCheckbox:before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: transparent;
+  border: .0625rem solid #c6d9d9;
+  transition: background-color .2s;
+  content: "";
+}
+
+.customCheckbox:checked:after {
+  width: .75rem;
+  height: .375rem;
+  border-color: #536060;
+}
+
+.customCheckbox:after {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-bottom: .125rem solid transparent;
+  border-left: .125rem solid transparent;
+  transform: rotate(-45deg);
+  content: "";
+}
+.checkbox__body {
+  padding-right: 2px;
+}
+.checkboxLabel {
+  display: flex;
+  justify-content: center;
+  margin-left: .5rem;
+}
+
+
+.filtrationOptions {
+  font-size: 20px;
+  line-height: 2;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.select {
+  padding: 5px 25px;
+
+  @include devices(mobile) {
+    width: 200px;
+  }
+}

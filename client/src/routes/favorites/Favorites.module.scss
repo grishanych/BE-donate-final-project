@@ -1,0 +1,244 @@
+@use"../../styles/variables";
+@use "../../styles/mixins";
+@import "../../styles/mediaqueries";
+
+.cardsSectionWrapper {
+    padding: 50px 15px;
+}
+.cardsSectionWrapper h2 {
+    padding-top: 50px;
+}
+
+.cardsListWrapper,
+.cardsListDonatWrapper {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    @include devices(mobile) {
+        padding-bottom: 70px;
+    }
+}
+
+.cardsListDonatWrapper {
+    flex-direction: row;
+    width: 100%;
+    column-gap: 30px;
+
+    @include devices(mobile) {
+        justify-content: center;
+        width: 100%;
+    }
+}
+
+.cardsListDonatWrapper .cardItemPriceWrapper {
+    display: none;
+}
+
+.cardsListDonatWrapper .nameContainer {
+    @include devices(mobile) {
+       max-width: 160px;
+    }
+}
+
+.cardsListDonatWrapper .cardItemImage {
+    width: 100px;
+}
+
+.cardsListDonatWrapper .cardItemWrapper {
+    width: fit-content;
+
+    @include devices(laptop) {
+        flex-wrap: nowrap;
+        width: 370px;
+    }
+}
+
+.cardsListDonatWrapper .productInfo {
+    width: 100%;
+
+    @include devices(tablet) {
+        width: 400px;
+    }
+    @include devices(mobile) {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.cardsListDonatWrapper .buttonsWrapper {
+    justify-content: center;
+    width: 65px;
+
+    @include devices(tablet) {
+        justify-content: center;
+    }
+    @include devices(mobile) {
+        width: 100%;
+    }
+}
+
+.cardsSectionHeadline {
+    color: variables.$fc-main;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+  .cardsSectionText {
+    padding-top: 5px;
+    color: variables.$fc-text;
+}
+
+.favoriteEmpty {
+    padding-top: 100px;
+    text-align: center;
+}
+
+.cardItemWrapper {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 11px;
+    border: 1px solid rgba(114, 114, 114, 1);
+    border-radius: 25px;
+
+    @include devices(mobile) {
+        padding: 10px;
+    }
+}
+
+
+.cardItemImageWrapper {
+    display: flex;
+    align-items: center;
+    border: 5px solid variables.$bgc-second;
+    border-radius: 25px;
+}
+.productInfo{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 40%;
+
+    @include devices(mobile) {
+        width: inherit;
+    }
+}
+
+.cardItemImage {
+    width: 150px;
+    object-fit: cover;
+    border-radius: 25px;
+}
+
+.decorLot,
+.decorDonat {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    padding: 8px;
+    font-weight: 700;
+    background-color: variables.$bgc-hot;
+    border-radius: 20px 0px;
+}
+
+.decorDonat {
+    width: 100px;
+    background-color: variables.$bgc-attention;
+}
+
+.quantityCounterWrapper{
+    display: flex;
+    align-items: center;
+    width: 130px;
+}
+
+.cardItemPriceWrapper {
+    @media screen and (min-width: 320px) and (max-width: 480px) {
+        width: 100%;
+        padding: 0px 0px 25px;
+        font-size: 18px;
+    }
+}
+
+.cardItemPrice {
+    display: flex;
+    justify-content: center;
+    color: rgba(114, 114, 114, 1);
+    font-weight: 700;
+}
+.tableRow{
+    display: grid;
+    grid-template-columns: 300px 150px;
+    align-items: center;
+    justify-content: space-between;
+    justify-items: start;
+    padding-bottom: 11px;
+    color: rgba(61, 61, 61, 1);
+    font-size: 16px;
+    line-height: 16px;
+    border-bottom: 1px solid #7c8d66;
+    border-radius: 0;
+    @include mixins.font-family-medium;
+}
+.nameContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 15px;
+}
+.name {
+    @include mixins.font-family-medium;
+    padding-bottom: 10px;
+    font-size: 16px;
+    line-height: 16px;
+}
+.sku{
+    @include mixins.font-family-regular;
+    margin-bottom: 10px;
+    color: #727272;
+    font-size: 15px;
+    line-height: 16px;
+    span {
+        color: #a5a5a5;
+        text-transform: uppercase;
+    }
+
+}
+
+.buttonsWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 30%;
+
+    @include devices(mobile) {
+        justify-content: center;
+        width: 100%;
+    }
+}
+
+.button {
+    display: block;
+}
+
+.buttonHidden {
+    display: none;
+}
+
+.buttonDelete {
+    margin: 0px 20px;
+}
+
+.loginModal {
+    width: 150px;
+    text-align: center;
+}
